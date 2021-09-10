@@ -1,0 +1,14 @@
+package airlineReservationSystem;
+
+public abstract interface Extra {
+	
+	public void Food() {
+		System.out.println("기내식을 추가합니다.");
+		System.out.println(" ");
+		
+	}
+	
+	public void Baggage() {
+		System.out.println("기내식을 추가합니다.");
+	}
+}

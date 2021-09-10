@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;QStopExample.java&apos; to &apos;Chapter02_VariableTypes/src/ch02_4_console_in_out&apos;&#x0D;&#x0A;- Original project: &apos;Chapter02_VariableTypes&apos;&#x0D;&#x0A;- Destination element: &apos;Chapter02_VariableTypes/src/ch02_4_console_in_out&apos;&#x0D;&#x0A;- Original element: &apos;ch02_4_console_in_out.QStopExample.java&apos;" description="Copy compilation unit" destination="/src&lt;ch02_4_console_in_out" element1="/src&lt;ch02_4_console_in_out{QStopExample.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1627264020023" units="1" version="1.0"/>
+</session>

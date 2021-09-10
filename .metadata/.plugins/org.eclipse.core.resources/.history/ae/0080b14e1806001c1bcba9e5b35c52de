@@ -1,0 +1,16 @@
+package Wilderness;
+import java.util.*;
+
+public class Example {
+	
+	DateFix df = new DateFix();
+	Map<String, String> map = new HashMap<>();
+	
+	map.put("가는편날짜", df.GoDate );
+	
+	
+
+	
+	
+	
+}

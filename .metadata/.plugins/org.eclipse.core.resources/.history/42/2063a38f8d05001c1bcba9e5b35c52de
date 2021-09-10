@@ -1,0 +1,79 @@
+package Wilderness;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Scanner;
+
+
+
+
+
+public class DateFix {
+
+	Scanner sc = new Scanner(System.in);
+
+	//출발날짜 도착날짜 정하기 
+	
+	String Date = "yyyy_MM_dd";
+	String GoDate = "";
+	String BackDate = "";
+	
+	
+	
+	void date() {	
+	
+		System.out.println("가는편 출발일을 정해주세요");
+		System.out.println(Date);
+		GoDate=sc.nextLine();
+		
+		System.out.println();
+		System.out.println("가는편 츨발일");
+		System.out.println(GoDate);
+		System.out.println();
+		
+		
+		System.out.println("오는편 출발일를 정해주세요");
+		System.out.println(Date);
+		BackDate=sc.nextLine();
+		
+		System.out.println();
+		System.out.println("오는편 츨발일");
+		System.out.println(BackDate);
+		System.out.println();
+		
+		
+
+		
+	fixDate();
+	dateCheck();
+	Reservation.Reserve();
+	}
+	void dateCheck() {
+		 try {
+	         SimpleDateFormat dateFormat = new 
+	             SimpleDateFormat ("yyyy-MM-dd");
+	         Date date1 = dateFormat.parse(GoDate);
+	         Date date2 = dateFormat.parse(BackDate);
+	         System.out.println("Date-1: " + 
+	                            dateFormat.format(date1));
+	         System.out.println("Date-2: " +
+	                            dateFormat.format(date2));
+	         if(date1.before(date2)){
+	             System.out.println(
+	                 "Date-1 is before Date-2");
+	         } 
+	     } catch (ParseException ex) { }
+	}
+	void fixDate() {
+	System.out.println("----------------------------------------");
+	System.out.print("가는편 츨발일\n");
+	System.out.print(GoDate+"\n");
+	System.out.print("오는편 츨발일\n");
+	System.out.print(BackDate+"\n");
+	
+	
+	}
+	
+	}
+

@@ -1,0 +1,88 @@
+package Wilderness;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+import java.util.Scanner;
+
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+ class SendEmail2 {
+	 void mail(String id) throws MessagingException, IOException{
+		ReservationFix r = new ReservationFix();
+		MemberMNG mng = Join.memberMap.get(id);
+		
+	
+
+		Scanner sc = new Scanner(System.in);
+
+		
+		String mailadress ="yoonzi1003@gmail.com";
+	
+		// 메일 관련 정보
+		
+		String host = "smtp.gmail.com";
+		System.out.println("메일을 입력해 주세요(GMAIL)");
+		String username = sc.nextLine();
+		System.out.println("비밀번호를 입력해 주세요");
+		String password = sc.nextLine();
+
+		// 메일 내용
+		String recipient = mailadress;
+		String subject = "항공 예약 정보 입니다.";
+		int size = 0;
+
+        String body = "";
+		FileInputStream file = new FileInputStream("C:\\Temp\\Q&A.txt");
+		while((size = file.available())>0){ 
+            byte contents[] = new byte[size];   //size만큼 저장할 수 있는 공간을 미리 생성.
+            int flag = file.read(contents);      
+
+//file.read(contents)는 contents에 데이터를 가득 채워주고, 바이트 수를 넘겨준다.
+//만약, 읽어들인 데이터가 'EOF'라면 flag = -1의 값을 가지게 된다.
+            if(flag==-1){
+                break;
+            }
+
+            String body = new String(contents);  //Byte[] contents의 내용을 String으로 바꾸어 저장한다.
+            System.out.println(str);
+        }
+        file.close(); //입출력 스트림은 생성하고나서 close()를 해주는 것이 좋다.
+			
+		
+		
+
+
+
+		//properties 설정
+		Properties props = new Properties();
+		props.put("mail.smtps.auth", "true");
+		// 메일 세션
+		Session session = Session.getDefaultInstance(props);
+		MimeMessage msg = new MimeMessage(session);
+
+		// 메일 관련
+		msg.setSubject(subject);
+		msg.setText(body);
+		msg.setFrom(new InternetAddress(username));
+		msg.addRecipient(Message.RecipientType.TO, new InternetAddress(recipient));
+
+		// 발송 처리
+		Transport transport = session.getTransport("smtps");
+		transport.connect(host, username, password);
+		transport.sendMessage(msg, msg.getAllRecipients());
+		transport.close();    
+
+		System.out.println("발송이 완료됬습니다.");
+		
+	}
+
+
+
+}
+

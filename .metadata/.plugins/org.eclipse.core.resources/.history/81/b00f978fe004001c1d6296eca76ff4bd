@@ -1,0 +1,10 @@
+package airlineReservationSystem;
+
+public class Total {
+
+	static int allPrice = (SSS.price+AddExtra.addPrice+Seat.seatPrice) ;
+	public void total() {
+	System.out.println("총 결제 가격은 "+ allPrice + "원 입니다.");
+	}
+	
+}

@@ -1,0 +1,22 @@
+package Wilderness;
+import java.util.*;
+
+public class Example {
+	
+	Scanner sc = new Scanner(System.in);
+	String Date = "yyyy_MM_dd";
+	String GoDate = "";
+	String BackDate = "";
+	
+	public void runReservation() {
+		
+		
+		
+	}
+	
+	
+
+	
+	
+	
+}

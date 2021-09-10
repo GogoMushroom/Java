@@ -1,0 +1,8 @@
+package airlineReservationSystem;
+
+public class Food {
+	
+	System.out.println("기내식을 추가합니다.");
+	
+	
+}

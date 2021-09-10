@@ -1,0 +1,18 @@
+package ect;
+
+import java.text.ParseException;
+
+import Wilderness.ReservationFix;
+
+public class main {
+	public static void main(String[] args) throws ParseException {
+		ReservationFix e = new ReservationFix();
+		
+		e.date();
+		e.sss();
+		
+
+		 
+
+	}
+}

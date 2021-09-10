@@ -1,0 +1,13 @@
+package airlineReservationSystem;
+
+public abstract interface Extra {
+	
+	public static void Food() {
+		
+		
+	}
+	
+	public static void Baggage() {
+		
+	}
+}

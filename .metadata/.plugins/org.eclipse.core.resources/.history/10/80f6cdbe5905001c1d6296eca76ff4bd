@@ -1,0 +1,6 @@
+package airlineReservationSystem;
+
+public class User {
+	
+int price = 0;  
+}

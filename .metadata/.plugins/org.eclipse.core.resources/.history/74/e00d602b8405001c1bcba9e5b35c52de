@@ -1,0 +1,89 @@
+package Wilderness;
+
+public class MemberMNG {
+   private String ID;
+   private String PW;
+   private String Name;
+   private boolean isMan = false;
+   private String birth = null;
+   private String email = null;
+   
+   public MemberMNG(String iD, String pW, String name) {
+      this.ID = iD;
+      this.PW = pW;
+      this.Name = name;
+   }
+   public MemberMNG(String iD,String name,boolean isMan, String birth, String email) {
+      this.ID = iD;
+      this.Name = name;
+      this.isMan = isMan;
+      this.birth = birth;
+      this.email = email;
+   }
+   
+   public MemberMNG(String iD, String pW, String name,boolean isMan, String birth, String email) {
+      this.ID = iD;
+      this.PW = pW;
+      this.Name = name;
+      this.isMan = isMan;
+      this.birth = birth;
+      this.email = email;
+   }
+   
+   
+
+   public boolean isMan() {
+      return isMan;
+   }
+
+   public void setMan(boolean isMan) {
+      this.isMan = isMan;
+   }
+
+   public String getBirth() {
+      return birth;
+   }
+
+   public void setBirth(String birth) {
+      this.birth = birth;
+   }
+
+   public String getEmail() {
+      return email;
+   }
+
+   public void setEmail(String email) {
+      this.email = email;
+   }
+
+
+   public String getID() {
+      return ID;
+   }
+
+   public String getPW() {
+      return PW;
+   }
+
+   public String getName() {
+      return Name;
+   }
+
+   public void setID(String iD) {
+      ID = iD;
+   }
+
+   public void setPW(String pW) {
+      PW = pW;
+   }
+
+   public void setName(String name) {
+      Name = name;
+   }
+
+   @Override
+   public String toString() {
+      return "ID : " + ID + " PW : " + PW + " Name : " + Name;
+   }
+
+}

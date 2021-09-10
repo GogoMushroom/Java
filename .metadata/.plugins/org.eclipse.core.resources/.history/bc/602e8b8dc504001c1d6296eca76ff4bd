@@ -1,0 +1,29 @@
+package airlineReservationSystem;
+
+public class SSS {
+	
+	public int count1 = 9;
+	public int count2 = 4;
+	public int count3 = 8;
+	
+	public void GoPlane() {
+	System.out.println("가는편 비행기 ");
+	System.out.println("time table");
+	System.out.println("1.");
+	System.out.println("┎━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┒");
+	System.out.println("	출발 7:00~ 도착 9:00" +count1+"/9석 남았습니다        ");
+	System.out.println("┖━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┚");
+	System.out.println("2.");
+	System.out.println("┎━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┒");
+	System.out.println("	출발 10:00~ 도착 13:00" +count2+"/9석 남았습니다");
+	System.out.println("┖━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┚");
+	System.out.println("3.");
+	System.out.println("┎━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┒");
+	System.out.println("	출발 16:00~ 도착 18:00" +count3+"/9석 남았습니다");
+	System.out.println("┖━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┚");
+	
+	
+	
+	
+	}
+}

@@ -1,0 +1,20 @@
+package wilderness;
+
+public class Date {
+
+	//출발날짜 도착날짜 정하기 
+	
+	int GoMonth = 0;
+	int GoDay = 0;
+	int BackMonth = 0;
+	int BackDay = 0;
+	
+	
+	void date() {	
+	System.out.println("출발월을 정해주세요");
+	
+	
+	
+	
+	}
+}

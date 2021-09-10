@@ -1,0 +1,21 @@
+package airlineReservationSystem;
+
+public class main {
+	public static void main(String[] args) {
+		
+		
+
+		
+		SSS s = new SSS();
+		s.GoPlane();
+		s.BackPlane();
+		
+//		AddExtra ae= new AddExtra();
+//		ae.addFood();
+//		ae.addBaggage();
+//		ae.total();
+//		
+//		Seat st = new Seat();
+//		st.upSeat();
+	}
+}

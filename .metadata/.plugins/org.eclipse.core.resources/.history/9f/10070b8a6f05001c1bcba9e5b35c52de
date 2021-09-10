@@ -1,0 +1,120 @@
+package hotel;
+
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Scanner;
+
+public class CustomerManagement {
+
+	Scanner sc = new Scanner(System.in);
+	LinkedList<Customer>list = new LinkedList<Customer>();
+	LinkedList<Customer>login= new LinkedList<Customer>();
+	
+	public void newCustomer() {//?šŒ?› ê°??…
+		
+		//ê³ ê° ë¦¬ìŠ¤?Š¸
+		
+		System.out.print("id:");
+		String id=sc.nextLine();
+		System.out.print("ë¹„ë?ë²ˆí˜¸: ");
+		String pwd=sc.nextLine();
+		System.out.print("?´ë¦?: ");
+		String name=sc.nextLine();
+		System.out.print("? „?™”ë²ˆí˜¸: ");
+		String phoneNo=sc.nextLine();
+		System.out.print("ì¹´ë“œë²ˆí˜¸: ");
+		String cardNo=sc.nextLine();
+	
+	
+	list.add(new Customer(id, pwd, name, phoneNo, cardNo));
+	
+	
+	}
+	
+	public List<Customer> name() {
+	
+	int a =-1;
+	
+	while (a==-1 || login.isEmpty()) {
+		System.out.print("1: ?šŒ?›ê°??…   2: ë¡œê·¸?¸ >> ");
+		String input = sc.nextLine();
+		if(input.equals("1")) {
+			newCustomer();
+		} else if (input.equals("2")) {
+			login = (LinkedList<Customer>) login();
+			a=1;
+		}
+	}
+	return login;
+	}
+	
+	public List<Customer>login() {
+		LinkedList<Customer>list2 = new LinkedList<Customer>();
+		
+		String id;
+		String pwd;
+		
+		
+		for(int i=0; i<list.size(); i++) {
+			
+			do {
+				System.out.println("id: ");
+				id=sc.nextLine();
+				System.out.println("ë¹„ë?ë²ˆí˜¸: ");
+				pwd=sc.nextLine();
+				
+				if(!(list.get(i).getId().equals(id))||!(list.get(i).getPwd().equals(pwd))){
+					System.out.println("?‹¤?‹œ ?…? ¥?•˜?„¸?š”.");
+				}
+				
+			}while (!(list.get(i).getId().equals(id))||!(list.get(i).getPwd().equals(pwd)));
+			
+			list2.add(0, new Customer(list.get(i).getId(), list.get(i).getPwd(), list.get(i).getName(), list.get(i).getPhoneNo(), list.get(i).getIden()));
+			
+			System.out.println(list.get(i).getName()+ "?‹˜ ë°˜ê°‘?Šµ?‹ˆ?‹¤.");
+		
+		
+		}return list2;
+	}
+	
+	public void updateCustomer() { // ?šŒ?›? •ë³? ?ˆ˜? •
+		System.out.print("id: ");
+		String id= sc.nextLine();
+		System.out.print("ë¹„ë?ë²ˆí˜¸: ");
+		String pwd= sc.nextLine();
+		
+		for(int i=0; i<list.size(); i++) {
+			if(list.get(i).getId().equals(id)&& list.get(i).getPwd().equals(pwd)) {
+				//ë¡œê·¸?¸ ?„±ê³?
+				System.out.print("?´ë¦?: ");
+				String name=sc.nextLine();
+				System.out.print("? „?™”ë²ˆí˜¸: ");
+				String phoneNo=sc.nextLine();
+				System.out.print("ì£¼ë?¼ë“±ë¡ë²ˆ?˜¸: ");
+				String iden=sc.nextLine();
+				
+				list.remove(i);
+				list.add(i, new Customer(id,pwd, name, phoneNo, iden));
+				}
+			}
+		}	// ?—…?°?´?Š¸ ë©”ì†Œ?“œ ?™„?„±
+	
+	public void removeCustomer() {
+		System.out.print("id: ");
+		String id= sc.nextLine();
+		System.out.print("ë¹„ë?ë²ˆí˜¸: ");
+		String pwd= sc.nextLine();
+		
+		for(int i=0; i<list.size(); i++) {
+			if(list.get(i).getId().equals(id)&& list.get(i).getPwd().equals(pwd)) {
+				//ë¡œê·¸?¸ ?„±ê³?
+				System.out.print("? •ë§ë¡œ ?ƒˆ?‡´?•˜?‹œê² ìŠµ?‹ˆê¹?? (1:?˜ˆ   2:?•„?‹ˆ?˜¤) >>");
+				String input =sc.nextLine();
+				if(input.contentEquals("1")) {
+					list.remove(i);
+				}
+				else return;
+			}
+		}
+	}//remove ë©”ì†Œ?“œ ì¢…ë£Œ
+}

@@ -1,0 +1,30 @@
+package JavaJungsuk;
+
+	public class Air{
+	System.out.println("              _____    ");
+	System.out.println("             /     |   ");
+	System.out.println("            /      |  ");
+	System.out.println("           /       |  ");
+	System.out.println("          /        |  ");
+	System.out.println(" 式式式式式式式式式         式式式式式式式式式式式式          ");
+	System.out.println(" ﹤﹤﹤﹤﹤﹤﹤﹤﹤            ");
+	System.out.println(" ﹤﹤﹤﹤﹤﹤﹤﹤﹤                   ");
+	System.out.println("                    ");
+	System.out.println(" ﹤﹤﹤﹤﹤﹤﹤﹤﹤                   ");
+	System.out.println(" ﹤﹤﹤﹤﹤﹤﹤﹤﹤          ");
+	System.out.println(" 式式式式式式式式式         式式式式式式式式式式式式          ");
+	System.out.println("          \        |  ");
+	System.out.println("           \       |  ");
+	System.out.println("            \      |  ");
+	System.out.println("             \_____|        ");
+	System.out.println("                      ");
+	
+		
+	
+	System.out.printf("  abc def ");
+	System.out.printf("1 ﹤﹤﹤ ﹤﹤﹤");
+	System.out.printf("2 ﹤﹤﹤ ﹤﹤﹤");
+	
+	
+	
+}

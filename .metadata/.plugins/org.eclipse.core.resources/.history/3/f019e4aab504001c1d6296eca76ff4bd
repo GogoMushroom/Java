@@ -1,0 +1,10 @@
+package airlineReservationSystem;
+
+public class main {
+	public static void main(String[] args) {
+		AddExtra ae= new AddExtra();
+		ae.ExtraFood();
+		ae.ExtraB();
+		ae.total();
+	}
+}

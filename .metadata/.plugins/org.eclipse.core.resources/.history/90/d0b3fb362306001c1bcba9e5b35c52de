@@ -1,0 +1,86 @@
+package Wilderness;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+public class CustomerSign {
+   public Map<String, MemberMNG> mMap;
+   private Scanner sc = new Scanner(System.in);
+   MemberMNG meM = new MemberMNG("iD", "pW", "name", false, "birth", "email");
+   
+   //맵 형태 담아준거(getID는 회원가입꺼를 가져와야된다.)
+   public CustomerSign() {
+      mMap = new HashMap<>();
+      mMap.put("ID", new MemberMNG(meM.getID(), meM.getPW(), meM.getName(), false, "admin", "admin"));
+   }
+   
+   // 예약자 정보 얻기
+//   boolean isMan = false;
+   public void customerInformation() {
+      mMap = new HashMap<>();
+      
+
+   String gender = null;
+   String email2= null;
+   String birth2 = null;
+      
+      while (true) {
+         try {
+            System.out.println("예약자 정보를 입력해주세요");
+            System.out.print("성별을 선택해주세요(M or F) > ");
+            switch (gender = sc.nextLine()) {
+            case "M":
+               meM.setMan(true);
+                  gender = "남자";
+               break;
+            case "F":
+               meM.setMan(false);
+                  gender = "여자";
+               break;
+            default:
+               continue;
+            }
+            System.out.print("생년월일을 6자리를 입력해주세요 (931126) > ");
+//            email2 = (String.valueOf(meM.setBirth(sc.nextLine());
+            meM.setBirth(sc.nextLine());
+            System.out.print("이메일을 입력해주세요 > ");
+            meM.setEmail(sc.nextLine());
+            System.out.println("==================================");
+            System.out.println("       예약자 정보를 확인하여 주십시오");
+            System.out.println("이름         : " );
+//            mMap.get(""ID"").getName(); 구현해서  넣어주면 된다.
+            System.out.println("성별         : " + gender);
+            System.out.println("생년월일   : " + meM.getBirth());
+            System.out.println("이메일      : " + meM.getEmail());
+            System.out.println("==================================");
+            System.out.println("  1.다음        2.다시 작성");
+            System.out.print("선택 >  ");
+            switch (sc.nextLine()) {
+            case "1":
+               break;
+            case "2":
+//               System.out.println(mMap.get("customInfo"));
+//               System.out.println(mMap.size());
+               continue;
+            case "3":
+               break;
+            }
+         } catch (Exception e) {
+            System.out.println("입력값이 잘못되었습니다. 다시 입력해주세요");
+            continue;
+         }
+         break;
+      }
+      mMap.put("ID", new MemberMNG(meM.getID(), meM.getPW(), meM.getName(), meM.isMan(), meM.getBirth(), meM.getEmail()));
+      System.out.println(mMap.get("ID").getID()+" "+mMap.get("ID").getPW()+" "+mMap.get("ID").getName()+" "+mMap.get("ID").isMan()+" "+mMap.get("ID").getBirth()+" "+mMap.get("ID").getEmail());
+      System.out.println(mMap.size());
+   }
+   
+//   public static void main(String[] args) {
+//      CustomerSign cs = new CustomerSign();
+//      cs.customerInformation();
+//      System.out.println(cs.mMap.get("customInfo").getID());
+//      System.out.println(cs.mMap.size());
+//   }
+}

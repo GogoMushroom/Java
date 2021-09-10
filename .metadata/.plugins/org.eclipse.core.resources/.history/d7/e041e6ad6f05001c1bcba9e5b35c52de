@@ -1,0 +1,215 @@
+package hotel;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class HotelManagement {
+
+	private int total;
+	private int idx;
+	private HotelInfo h;
+	List<HotelInfo>info;
+	List<ReserveInfo>reserves;//?˜ˆ?•½? •ë³?
+	Scanner sc = new Scanner(System.in);
+	private int rOwnNum;
+
+	int num1 = 5;
+	int num2 = 5;
+	int num3 = 5;
+	
+	public HotelManagement() {
+		info = new ArrayList<HotelInfo>();
+		reserves = new ArrayList<ReserveInfo>();
+		info.add(new HotelInfo("?Š¹?‹¤", 100000, 10, num1));
+		info.add(new HotelInfo("?Š¤?œ„?Š¸ë£?", 70000, 4, num2));
+		info.add(new HotelInfo("?””?Ÿ­?Š¤ë£?", 50000, 2, num3));
+	}
+
+	public void print(List<HotelInfo>info) {
+		for(int i =0; i<info.size(); i++) {
+			System.out.print(Array.get(info,i));
+			System.out.println();
+		}
+	}
+	
+	int count;
+	int count2=1;
+	
+	public void reserve(List<HotelInfo>info, List<Customer>cust) {
+		
+		int reservecount = 0;
+		
+		System.out.print(info.toString());
+		System.out.println();
+		
+		
+		int num;
+		System.out.print("?–´?–¤ ë°©ì„ ?˜ˆ?•½?•˜?‹œê² ìŠµ?‹ˆê°?? >>" );
+		num = sc.nextInt();
+		String str =sc.nextLine();
+		
+		
+		
+		while(info.get(num).getrSpareCount()==0) {
+			System.out.print("?–´?–¤ ë°©ì„ ?˜ˆ?•½?•˜?‹œê² ìŠµ?‹ˆê¹??>>");
+			num =sc.nextInt();
+			String str2 = sc.nextLine();
+			System.out.println("ë°©ì´ ?‹¤ ì°¼ìœ¼?‹ˆ ?‹¤ë¥? ë°©ì„ ?´?š©?•´ì£¼ì„¸?š”.");
+		}
+	
+		//numë²ˆì§¸ ë°©ì˜ ?‚¨?? ë°©ìˆ˜?—?„œ -1 ?•´?•¼?•¨
+		
+		switch(num) {
+		case 0:
+			num1--;
+			info.remove(0);
+			info.add(0, new HotelInfo("?Š¹?‹¤", 100000, 10, num1));
+			break;
+		case 1:
+			num2--;
+			info.remove(1);
+			info.add(1, new HotelInfo("?Š¤?œ„?Š¸ë£?", 70000, 4, num2));
+			break;
+		case 2:
+			num3--;
+			info.remove(2);
+			info.add(2, new HotelInfo("?””?Ÿ­?Š¤ë£?", 50000, 2, num3));
+			break;
+		
+		
+		}
+		
+		System.out.println(info.get(num)+ "?´ ?„ ?ƒ?˜?—ˆ?Šµ?‹ˆ?‹¤.");
+		
+		System.out.print("ë°©ë¬¸?˜ˆ? •?¼: " );
+		String date = sc.nextLine();
+		System.out.print("?ˆ™ë°•ê¸°ê°?: " );
+		int period = sc.nextInt();
+		String str3 = sc.nextLine();
+		System.out.print("?´?š©?¸?›: " );
+		int count = sc.nextInt();
+		reservecount+=count;
+		String str2 = sc.nextLine();
+		total=period*info.get(num).getrPrice();
+		
+		if(count>info.get(num).getrLimitNumber()) {
+			System.out.println("ì¶”ê??˜?Š” ?¸?›?? " + (count-(info.get(num).getrLimitNumber()))+"ëª? ?…?‹ˆ?‹¤.");
+			System.out.println("1?¸?‹¹ ì¶”ê?ê¸ˆì•¡?? 20,000?› ?…?‹ˆ?‹¤. ê³„ì† ì§„í–‰?•˜?‹œê² ìŠµ?‹ˆê°??(yes/no)");
+			String a =sc.nextLine();
+			
+			if(a.equals("yes")) {
+				int p=info.get(num).getrPrice()*period;
+				p+=20000*period*(count-info.get(num).getrLimitNumber());
+				
+				total=p;
+				reservecount+=count-(info.get(num).getrLimitNumber());
+			
+			} else return;
+		
+		}
+		
+			System.out.println("?˜ˆ?•½?´ ?™„ë£Œë˜?—ˆ?Šµ?‹ˆ?‹¤.");
+			int reserveNo=count2++;
+			
+			rOwnNum = count++;
+			
+			System.out.println("?˜ˆ?•½ë²ˆí˜¸?Š”" + reserveNo+ "?…?‹ˆ?‹¤.");
+			reserves.add(new ReserveInfo(info.get(num), cust.get(index++), date, period, reserveNo, reservecount, rOwnNum, total));
+	}
+
+	
+			public void reserveAssure() { // ?˜ˆ?•½?™•?¸
+				System.out.print("?˜ˆ?•½ë²ˆí˜¸ ?…? ¥: ");
+				int reserveNo = sc.nextInt();
+				String ss=sc.nextLine();
+			
+				for(int i=0; i<reserves.size(); i++) {
+					int a=reserves.get(i).getReserveNo();
+					
+				if(reserveNo==a) {
+					System.out.println(reserves.toString());
+				}
+				
+			}
+		}
+		public void checkin() { //ì²´í¬?¸
+			
+			System.out.print("ë°œê¸‰ë°›ì? ?˜ˆ?•½ë²ˆí˜¸ë¥? ?…? ¥?•´ ì£¼ì„¸?š”: ");
+			int w = sc.nextInt();
+			String s=sc.nextLine();
+			
+			for(int i=0; i<reserves.size(); i++) {
+				if(reserves.get(i).getReserveNo()==w) {
+					System.out.println(reserves.get(i).getH().getrName()+"-"+(rOwnNum)+ "ë²? ë°? ê°ì‹¤?…?‹ˆ?‹¤. ì¢‹ì? ?•˜ë£? ë³´ë‚´?‹­?‹œ?˜¤.");
+					reserves.get(i).setrOwnNum(rOwnNum);
+				}
+			}
+		}
+		int index;
+		
+		public void checkout() { // ì²´í¬?•„?›ƒ
+			
+			System.out.print("ê°ì‹¤?´ë¦„ì„ ?…? ¥?•´ ì£¼ì„¸?š”: ");
+			String r = sc.nextLine();
+			for(int i=0; i<reserves.size(); i++) {
+				String ownnum=reserves.get(i).getH().getrName()+"-"+reserves.get(i).getrOwnNum();
+		
+				if(r.equals(ownnum)) {
+					index =i; // i ë²ˆì§¸ ê°ì‹¤?´?š©
+					System.out.println( "ì²´í¬?•„?›ƒ?´ ?™„ë£? ?˜?—ˆ?Šµ?‹ˆ?‹¤.");
+					System.out.println( "ê³„ì‚°?„œë¥? ë°›ì•„ì£¼ì„¸?š”");
+					bills();
+					reserves.remove(i);
+					
+				} else System.out.println("?˜ëª? ?…? ¥?•˜?…¨?Šµ?‹ˆ?‹¤.");
+			}
+		}
+		public void bills() {
+			System.out.print("ê²°ì œ?ˆ˜?‹¨(1:?˜„ê¸?  2:ì¹´ë“œ)>>");
+			String input=sc.nextLine();
+			
+			//index ë²ˆì§¸?˜ ê°ì‹¤ ?´?š©
+			
+			switch(input) {
+			case "1":// ?˜„ê¸?
+				//int price = reserves.get(index).getH().getrPrice();
+				
+				int price=reserves.get(index).getTotal();
+				String str= sc.nextLine();
+				System.out.println(price+"?›?„ ê²°ì œ?•´ì£¼ì„¸?š”");
+				System.out.print("ê²°ì œ?•˜?‹¤ ê¸ˆì•¡: ");
+				//int pay = sc.nextInt();
+				int re=-1;
+				
+				while(re<0) {
+					System.out.print("ê²°ì œ?•˜?‹¤ ê¸ˆì•¡: ");
+					int pay= sc.nextInt();
+					re= pay-price;
+				}
+				System.out.println( "ê±°ìŠ¤ë¦„ëˆ: " + re);
+				
+				break;
+				
+			case "2":// ì¹´ë“œ
+				String cardNo="";
+				
+				int price2=reserves.get(index).getTotal();
+				System.out.println(price2+ "?›?„ ê²°ì œ?•´ ì£¼ì„¸?š”.");
+				
+				while(!(cardNo.equals(reserves.get(index).getC().getIden()))) {
+					System.out.print("ì¹´ë“œ ë²ˆí˜¸ë¥? ?…? ¥?•˜?„¸?š”: ");
+					cardNo = sc.nextLine();
+					if(!(cardNo.equals(reserves.get(index).getC().getIden())))
+						System.out.println("?˜ëª»ëœ ì¹´ë“œ ë²ˆí˜¸?…?‹ˆ?‹¤.");
+				}
+				System.out.println("ê²°ì œ?˜?—ˆ?Šµ?‹ˆ?‹¤.");
+				
+					break;
+				default:
+					System.out.println("?˜ëª? ?…? ¥?•˜?…¨?Šµ?‹ˆ?‹¤.");
+					break;
+			}
+		}
+}

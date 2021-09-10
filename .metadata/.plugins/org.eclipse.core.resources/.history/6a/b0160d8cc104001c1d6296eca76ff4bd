@@ -1,0 +1,110 @@
+package airlineReservationSystem;
+
+import java.util.Scanner;
+
+public class Reservation {
+	
+
+		public void Reserve(){
+			
+		
+
+	//	
+//			MON	       TUE		  WED		 THU	   	FRI		   SAT		  SUN
+//		忙式式式式式式式式式式成式式式式式式式式式式成式式式式式式式式式式成式式式式式式式式式式成式式式式式式式式式式成式式式式式式式式式式成式式式式式式式式式式忖
+//		弛	~1~	   弛		  弛			 弛			弛	       弛		  弛			 弛
+//		弛 		   弛		  弛			 弛			弛	       弛		  弛			 弛
+//		弛		   弛		  弛			 弛			弛	       弛		  弛			 弛
+//		弛		   弛		  弛			 弛			弛	       弛		  弛			 弛
+//		戍式式式式式式式式式式托式式式式式式式式式式托式式式式式式式式式式托式式式式式式式式式式托式式式式式式式式式式托式式式式式式式式式式托式式式式式式式式式式扣
+//		弛		   弛		  弛			 弛			弛	       弛		  弛			 弛
+//		弛		   弛		  弛			 弛			弛	       弛		  弛			 弛
+//		弛		   弛		  弛			 弛			弛	       弛		  弛			 弛
+//		弛		   弛		  弛			 弛			弛	       弛		  弛			 弛
+//		戍式式式式式式式式式式托式式式式式式式式式式托式式式式式式式式式式托式式式式式式式式式式托式式式式式式式式式式托式式式式式式式式式式托式式式式式式式式式式扣
+//		弛		   弛		  弛			 弛			弛	       弛		  弛			 弛
+//		弛		   弛		  弛			 弛			弛	       弛		  弛			 弛
+//		弛		   弛		  弛			 弛			弛	       弛		  弛			 弛
+//		弛		   弛		  弛			 弛			弛	       弛		  弛			 弛
+//		戍式式式式式式式式式式托式式式式式式式式式式托式式式式式式式式式式托式式式式式式式式式式托式式式式式式式式式式托式式式式式式式式式式托式式式式式式式式式式扣
+//		弛		   弛		  弛			 弛			弛	       弛		  弛			 弛
+//		弛		   弛		  弛			 弛			弛	       弛		  弛			 弛
+//		弛		   弛		  弛			 弛			弛	       弛		  弛			 弛
+//		弛		   弛		  弛			 弛			弛	       弛		  弛			 弛
+//		戍式式式式式式式式式式托式式式式式式式式式式托式式式式式式式式式式托式式式式式式式式式式托式式式式式式式式式式托式式式式式式式式式式托式式式式式式式式式式扣
+//		弛		   弛		  弛			 弛			弛	       弛		  弛			 弛
+//		弛		   弛		  弛			 弛			弛	       弛		  弛			 弛
+//		弛		   弛		  弛			 弛			弛	       弛		  弛			 弛
+//		弛		   弛		  弛			 弛			弛	       弛		  弛			 弛
+//		戍式式式式式式式式式式托式式式式式式式式式式托式式式式式式式式式式托式式式式式式式式式式托式式式式式式式式式式托式式式式式式式式式式托式式式式式式式式式式扣
+		
+			Scanner sc = new Scanner(System.in);
+			String startplace = "QQQ" ;
+			String arrplace ="ZZZ";
+		
+		
+			
+		System.out.println("[蕨擒 Щ煎斜極]                                           ");	
+		System.out.println("                                             ");	
+		System.out.println("            轎嫦 紫衛                                                紫雜 紫衛 ");	
+		System.out.println("忙式式式式式式式式式式式式式式式忖         忙式式式式式式式式式式式式式式式忖");
+		System.out.println("弛      "+startplace+"      弛  ---->  弛      "+arrplace+"      弛");    
+		System.out.println("戌式式式式式式式式式式式式式式式戎         戌式式式式式式式式式式式式式式式戎");
+		System.out.println("		                                                        ");
+		
+		System.out.println("轎嫦紫衛 摹鷗> 1.檣繭 2.梯ん");
+		
+		String Scity = sc.nextLine();
+		
+		if (Scity.equals("1")||Scity.contains("檣")) {
+			
+			System.out.println("                                             ");	
+			System.out.println("            轎嫦 紫衛                                                紫雜 紫衛 ");	
+			System.out.println("忙式式式式式式式式式式式式式式式忖         忙式式式式式式式式式式式式式式式忖");
+			System.out.println("弛      "+"ICN"+"      弛  ---->  弛      "+arrplace+"      弛");    
+			System.out.println("戌式式式式式式式式式式式式式式式戎         戌式式式式式式式式式式式式式式式戎");
+			System.out.println("		                                                        ");
+			
+			System.out.println("紫雜紫衛 摹鷗> 1.薯輿");
+			String Acity = sc.nextLine();
+			
+			if (Acity.equals("1")||Acity.contains("薯")) {
+
+				System.out.println("                                             ");	
+				System.out.println("            轎嫦 紫衛                                                紫雜 紫衛 ");	
+				System.out.println("忙式式式式式式式式式式式式式式式忖         忙式式式式式式式式式式式式式式式忖");
+				System.out.println("弛      "+"ICN"+"      弛  ---->  弛      "+"CJU"+"      弛");    
+				System.out.println("戌式式式式式式式式式式式式式式式戎         戌式式式式式式式式式式式式式式式戎");
+			
+			}
+		}
+		if (Scity.equals("2")||Scity.contains("梯")) {
+			System.out.println("                                             ");	
+			System.out.println("            轎嫦 紫衛                                                紫雜 紫衛 ");	
+			System.out.println("忙式式式式式式式式式式式式式式式忖         忙式式式式式式式式式式式式式式式忖");
+			System.out.println("弛      "+"GMP"+"      弛  ---->  弛      "+arrplace+"      弛");    
+			System.out.println("戌式式式式式式式式式式式式式式式戎         戌式式式式式式式式式式式式式式式戎");
+			System.out.println("		                                                        ");
+			
+			System.out.println("紫雜紫衛 摹鷗> 1.睡骯");
+			String Acity2 = sc.nextLine();
+			
+			if(Acity2.equals("1")||Acity2.contains("睡")) {
+				System.out.println("                                             ");	
+				System.out.println("            轎嫦 紫衛                                                紫雜 紫衛 ");	
+				System.out.println("忙式式式式式式式式式式式式式式式忖         忙式式式式式式式式式式式式式式式忖");
+				System.out.println("弛      "+"GMP"+"      弛  ---->  弛      "+"PUS"+"      弛");    
+				System.out.println("戌式式式式式式式式式式式式式式式戎         戌式式式式式式式式式式式式式式式戎");
+				System.out.println("		                                                        ");
+					
+			}
+		}
+			
+		}
+		}
+
+
+
+
+
+

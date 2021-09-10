@@ -1,0 +1,15 @@
+package practice;
+
+public class MyMathExample {
+	public static void main(String[] args) {
+		System.out.println(MyMath2.add(200L, 100L));
+		//Å¬·¡½º ¸Ş¼­µå È£Ãâ Å¬·¡½ºÀÌ¸§.¸Ş¼­µåÀÌ¸§(Áö¿ªº¯¼ö ...) °´Ã¼»ı¼º¾øÀÌ È£­„ °¡´É
+		MyMath2 mm = new MyMath2(); // ÀÎ½ºÅÏ½º »ı¼º 
+		mm.a = 200L;
+		mm.b = 100L	;	
+		//                 ÀáÁ¶º¯¼ö 		
+		System.out.println(mm.add()); // ÀÎ½ºÅÏ½º ¸Ş¼­µå È£Ãâ
+		// ÀáÁ¶º¯¼ö.¸Ş¼ÒµåÀÌ¸§ (); 
+		
+	}
+}

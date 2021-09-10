@@ -1,0 +1,24 @@
+package ch06_ex_bank;
+/*
+ * 은행계좌 구현 클래스 
+ */
+public class BankAccountPOP {
+	public static void main(String[] args) {
+		
+		 //계좌 초기화
+		int 잔고 = 0;
+		
+		 //계좌 입금   
+		int 입금액 = 10000;
+		잔고 = 잔고 + 입금액;
+		
+		 //계좌 출금
+		int 출금액 = 3000;
+		 잔고 = 잔고 - 출금액;
+		 
+		 //계좌 잔고 출력 
+		 System.out.println(잔고);
+		
+		
+	}
+}

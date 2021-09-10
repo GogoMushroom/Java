@@ -1,0 +1,31 @@
+
+	package Wilderness;
+
+	import java.util.Scanner;
+
+	//결제부분 실행 클래스
+	public class PaymentRun {
+	   //결제부분 실행 메소드
+	   public void run() {
+	      Payment pay = new ImplementsClass(); 
+	      ImplementsClass im = new ImplementsClass();
+	      Scanner sc = new Scanner(System.in);
+	      
+	      while (true) {
+	         im.paymentFirstView();
+	         switch (sc.nextLine()) {
+	         case "1":
+	            pay.card();
+	            break;
+	         case "2":
+	            pay.account();
+	            break;
+	         default:
+	            System.out.println("다시 입력해주세요");
+	            continue;
+	         }
+	         return;
+	      }
+	   }
+	}
+

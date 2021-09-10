@@ -1,0 +1,94 @@
+package airlineReservationSystem;
+
+import java.util.Scanner;
+
+public class reservation {
+	
+
+		public static void main(String[] args) {
+			
+		
+
+	//	
+//			MON	       TUE		  WED		 THU	   	FRI		   SAT		  SUN
+//		┌──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────┐
+//		│	~1~	   │		  │			 │			│	       │		  │			 │
+//		│ 		   │		  │			 │			│	       │		  │			 │
+//		│		   │		  │			 │			│	       │		  │			 │
+//		│		   │		  │			 │			│	       │		  │			 │
+//		├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+//		│		   │		  │			 │			│	       │		  │			 │
+//		│		   │		  │			 │			│	       │		  │			 │
+//		│		   │		  │			 │			│	       │		  │			 │
+//		│		   │		  │			 │			│	       │		  │			 │
+//		├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+//		│		   │		  │			 │			│	       │		  │			 │
+//		│		   │		  │			 │			│	       │		  │			 │
+//		│		   │		  │			 │			│	       │		  │			 │
+//		│		   │		  │			 │			│	       │		  │			 │
+//		├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+//		│		   │		  │			 │			│	       │		  │			 │
+//		│		   │		  │			 │			│	       │		  │			 │
+//		│		   │		  │			 │			│	       │		  │			 │
+//		│		   │		  │			 │			│	       │		  │			 │
+//		├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+//		│		   │		  │			 │			│	       │		  │			 │
+//		│		   │		  │			 │			│	       │		  │			 │
+//		│		   │		  │			 │			│	       │		  │			 │
+//		│		   │		  │			 │			│	       │		  │			 │
+//		├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
+		
+			Scanner sc = new Scanner(System.in);
+			String startplace = "QQQ" ;
+			String arrplace ="ZZZ";
+		
+		
+			
+		System.out.println("                                             ");	
+		System.out.println("                                             ");	
+		System.out.println("            출발 도시                                                도착 도시 ");	
+		System.out.println("┌───────────────┐         ┌───────────────┐");
+		System.out.println("│      "+startplace+"      │  ---->  │      "+arrplace+"      │");    
+		System.out.println("└───────────────┘         └───────────────┘");
+		System.out.println("		                                                        ");
+		
+		System.out.println("출발도시 선택> 1.인천 2.김포");
+		
+		String Scity = sc.nextLine();
+		
+		if (Scity.equals("1")||Scity.contains("인")) {
+			
+			System.out.println("                                             ");	
+			System.out.println("            출발 도시                                                도착 도시 ");	
+			System.out.println("┌───────────────┐         ┌───────────────┐");
+			System.out.println("│      "+"ICN"+"      │  ---->  │      "+arrplace+"      │");    
+			System.out.println("└───────────────┘         └───────────────┘");
+			System.out.println("		                                                        ");
+			
+			System.out.println("도착도시 선택> 1.제주");
+			String Acity = sc.nextLine();
+			if (Acity.equals("1")||Acity.contains("제")) {
+
+				System.out.println("                                             ");	
+				System.out.println("            출발 도시                                                도착 도시 ");	
+				System.out.println("┌───────────────┐         ┌───────────────┐");
+				System.out.println("│      "+"ICN"+"      │  ---->  │      "+"CJU"+"      │");    
+				System.out.println("└───────────────┘         └───────────────┘");
+			
+			}
+		}
+		}
+}
+//		}else if (S2city.equals("2")||S2city.contains("김")) {
+//		System.out.println("도착도시 선택> 1.부산");
+//		
+//		
+//		}
+//	
+
+
+
+
+
+
+

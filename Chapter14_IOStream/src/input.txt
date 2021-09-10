@@ -1,0 +1,5 @@
+id=call1212
+eng_name=jiyoon
+kor_name=À±
+data=1,2,3,4,5
+c:/Temp

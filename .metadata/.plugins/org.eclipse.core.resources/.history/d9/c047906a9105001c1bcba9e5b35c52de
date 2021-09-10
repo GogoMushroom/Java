@@ -1,0 +1,166 @@
+package Wilderness;
+
+import java.util.Scanner;
+
+public class SSS2 {
+	static int price = 0;
+	
+	Scanner sc = new Scanner(System.in);
+	static String Go = "嬴霜 薑п雖雖 彊懊蝗棲棻.";
+	static String Back = "嬴霜 薑п雖雖 彊懊蝗棲棻.";
+	
+	String f1 = "轎嫦 7:00~ 紫雜 9:00";
+	String f2 = "轎嫦 10:00~ 紫雜 13:00";
+	String f3 = "轎嫦 16:00~ 紫雜 18:00";
+	String g = "陛朝ら綠ч晦";
+	String c = "螃朝ら綠ч晦";
+	int p1 = 70000;
+	int p2 = 80000;
+	int p3 = 90000;
+	int p4 = 100000;
+	int p5 = 110000;
+	
+	
+
+	
+	//陛朝ら 綠ч晦	
+	//綠ч晦 陛問擎 price 縑 盪濰脹棻.
+	//price朝 Total 贗楚蝶縑憮 識 唸營旎擋 allPrice縑 渦п霞棻. 
+	public void Plane() {
+		printBox("陛朝ら綠ч晦","	轎嫦 7:00~ 紫雜 9:00","	轎嫦 10:00~ 紫雜 13:00","	轎嫦 16:00~ 紫雜 18:00");
+		
+		try {
+//		System.out.println();
+//		System.out.println();
+//		System.out.println("陛朝ら 綠ч晦 ");
+//		System.out.println("time table");
+//		System.out.println("1.");
+//		System.out.println("灰收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收汐");
+//		System.out.println("	轎嫦 7:00~ 紫雜 9:00"         );
+//		System.out.println("汍收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收污");
+//		System.out.println("2.");
+//		System.out.println("灰收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收汐");
+//		System.out.println("	轎嫦 10:00~ 紫雜 13:00");
+//		System.out.println("汍收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收污");
+//		System.out.println("3.");
+//		System.out.println("灰收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收汐");
+//		System.out.println("	轎嫦 16:00~ 紫雜 18:00");
+//		System.out.println("汍收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收污");
+		
+		System.out.println();
+		System.out.println("檜辨ж褒 綠чら擊 摹鷗п 輿撮蹂");
+		String num=sc.nextLine();
+		if(num.equals("1")) {
+			Go = "轎嫦 7:00~ 紫雜 9:00";
+			price += 100000;
+			
+			System.out.println();
+			System.out.println("轎嫦 7:00~ 紫雜 9:00 ら擊 檜辨м棲棻. 陛問:"+price+"錳");
+		}else if (num.equals("2")){
+			Go = "轎嫦 10:00~ 紫雜 13:00";
+			price += 110000;
+		
+			System.out.println();
+			System.out.println("轎嫦 7:00~ 紫雜 9:00 ら擊 檜辨м棲棻. 陛問:"+price+"錳");
+		}else if (num.equals("3")){
+			Go = "轎嫦 16:00~ 紫雜 18:00";
+			price += 90000;
+			
+			System.out.println();
+			System.out.println("轎嫦 7:00~ 紫雜 9:00 ら擊 檜辨м棲棻. 陛問:"+price+"錳");
+		}
+		}catch(Exception e) {e.printStackTrace();}
+	}
+	
+	//螃朝ら 綠ч晦 
+	//綠ч晦 陛問擎 price 縑 盪濰脹棻.
+	//price朝 Total 贗楚蝶縑憮 識 唸營旎擋 allPrice縑 渦п霞棻. 
+	public void BackPlane() {
+		try {
+		System.out.println();
+		System.out.println();
+		System.out.println("螃朝ら 綠ч晦 ");
+		System.out.println("time table");
+		System.out.println("1.");
+		System.out.println("灰收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收汐");
+		System.out.println("	轎嫦 7:00~ 紫雜 9:00"         );
+		System.out.println("汍收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收污");
+		System.out.println("2.");
+		System.out.println("灰收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收汐");
+		System.out.println("	轎嫦 10:00~ 紫雜 13:00");
+		System.out.println("汍收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收污");
+		System.out.println("3.");
+		System.out.println("灰收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收汐");
+		System.out.println("	轎嫦 16:00~ 紫雜 18:00");
+		System.out.println("汍收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收污");
+		
+		System.out.println();
+		System.out.println("檜辨ж褒 綠чら擊 摹鷗п 輿撮蹂");
+		String num=sc.nextLine();
+		if(num.equals("1")) {
+			Back = "轎嫦 7:00~ 紫雜 9:00";
+			price += 100000;
+			
+			System.out.println();
+			System.out.println("轎嫦 7:00~ 紫雜 9:00 ら擊 檜辨м棲棻. 陛問:"+price+"錳");
+		}else if (num.equals("2")){
+			Back = "轎嫦 10:00~ 紫雜 13:00";
+			price += 110000;
+		
+			System.out.println();
+			System.out.println("轎嫦 7:00~ 紫雜 9:00 ら擊 檜辨м棲棻. 陛問:"+price+"錳");
+		}else if (num.equals("3")){
+			Back = "轎嫦 16:00~ 紫雜 18:00";
+			price += 90000;
+			
+			System.out.println();
+			System.out.println("轎嫦 7:00~ 紫雜 9:00 ら擊 檜辨м棲棻. 陛問:"+price+"錳");
+		}
+		}catch(Exception e) {e.printStackTrace();}
+	}
+		
+		void GBPlane () {
+		System.out.println();
+		System.out.println("");
+		System.out.println("檜辨ж衛朝 綠чら擎\n陛朝ら 綠ч晦"+Go+"\n螃朝ら 綠ч晦"+Back+"殮棲棻.");
+		System.out.println();
+		System.out.println("識 唸薯旎擋擎 "+price+"錳 殮棲棻.");
+		System.out.println("蹺陛唸薯璽戲煎 剩橫骨棲棻.");
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		}
+		
+		static void runAddExtra() {
+			AddExtra ae= new AddExtra();
+			ae.addFood();
+			ae.addBaggage();
+			ae.total();
+			AddExtra.runSeat();
+	}
+		
+		 public void printBox(String g,String f1,String f2,String f3) {
+			 System.out.println(g);
+				System.out.println("time table");
+				System.out.println("1.");
+				System.out.println("灰收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收汐");
+				System.out.println("	"+f1+"        ");
+				System.out.println("汍收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收污");
+				System.out.println("2.");
+				System.out.println("灰收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收汐");
+				System.out.println("	"+f2+" ");
+				System.out.println("汍收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收污");
+				System.out.println("3.");
+				System.out.println("灰收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收汐");
+				System.out.println("	"+f3+"");
+				System.out.println("汍收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收收污");
+				
+			 
+		 }
+	}
+
+
+
+
+	

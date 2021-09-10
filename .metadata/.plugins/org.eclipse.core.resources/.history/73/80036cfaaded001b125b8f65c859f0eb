@@ -1,0 +1,19 @@
+package src.ch02_4_console_in_out;
+
+import java.io.IOException;
+
+public class SystemInOut {
+	public static void main(String[] args) {
+		int keycode;
+		
+		try {
+			//keycode = System.in.read();
+		System.out.printf("keycode: %d\n" , System.in.read());
+			
+		}	catch (IOException e) {
+		    e.printStackTrace();
+		}
+		//keycode = System.in.read();
+		
+	}
+}

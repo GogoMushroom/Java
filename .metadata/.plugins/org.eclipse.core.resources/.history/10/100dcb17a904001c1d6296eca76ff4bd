@@ -1,0 +1,11 @@
+package airlineReservationSystem;
+
+public abstract interface Extra {
+	
+	public void Food() {
+		
+		
+	}
+	
+
+}

@@ -1,0 +1,9 @@
+package airlineReservationSystem;
+
+public class PChoice{
+
+public static void main(String[] args) {
+	SSS ss = new SSS();
+	ss.Plane();
+}
+}

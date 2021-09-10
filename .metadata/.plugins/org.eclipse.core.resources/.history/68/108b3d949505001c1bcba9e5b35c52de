@@ -1,0 +1,13 @@
+package Wilderness;
+
+public class main {
+	public static void main(String[] args) {
+		
+	
+
+
+		SSS2 s = new SSS2();
+		s.Plane();
+	
+	}
+}

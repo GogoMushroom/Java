@@ -1,0 +1,25 @@
+package airlineReservationSystem;
+
+import java.util.Scanner;
+
+public class Seat {
+	public void upSeat() {
+		Scanner sc = new Scanner (System.in);
+		AddExtra ae = new AddExtra();
+		int price = ae.addprice;
+		
+		System.out.println("좌석을 업그레이드 하시겠습니다?");
+		System.out.println("1.비즈니스 업그레이드 | 2.취소 ");
+		
+		String num = sc.nextLine();
+		if (num == "1") {
+			System.out.println("죄석이 비즈니스로 업그레이드 되었습니다. price : 50000원");
+			price += 50000;
+		}else {
+			System.out.println("");
+			
+		}
+		
+		
+}
+}

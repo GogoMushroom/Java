@@ -1,0 +1,31 @@
+package Wilderness;
+
+public class main {
+	public static void main(String[] args) {
+		ReservationFix e = new ReservationFix();
+		 e.runReservation();
+		 
+
+	}
+}
+void date() {	
+
+	System.out.println("가는편 출발일을 정해주세요");
+	System.out.println(Date);
+	GoDate=getsc("가는편출발일");
+	System.out.println("오는편 출발일를 정해주세요");
+	System.out.println(Date);
+	BackDate=getsc("오는편출발일");
+	System.out.println();
+	System.out.println("----------------------------------------");
+	System.out.print("가는편 츨발일\n");
+	System.out.print(GoDate+"\n");
+	System.out.print("오는편 츨발일\n");
+	System.out.print(BackDate+"\n");
+	
+	
+	private String getsc(String s) {
+		System.out.println();
+		System.out.println(s);
+		return sc.nextLine();
+	}

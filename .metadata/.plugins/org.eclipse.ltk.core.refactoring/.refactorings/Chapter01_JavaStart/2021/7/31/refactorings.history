@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 4 elements from project &apos;Chapter01_JavaStart&apos;&#x0D;&#x0A;- Original project: &apos;Chapter01_JavaStart&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     Chapter01_JavaStart/src/src.ch02_1_variable&#x0D;&#x0A;     Chapter01_JavaStart/src/src.ch02_2_primitive&#x0D;&#x0A;     Chapter01_JavaStart/src/src.ch02_3_type_casting&#x0D;&#x0A;     Chapter01_JavaStart/src/src.ch02_4_console_in_out" description="Delete elements" element1="/src&lt;src.ch02_4_console_in_out" element2="/src&lt;src" element3="/src&lt;src.ch02_3_type_casting" element4="/src&lt;src.ch02_2_primitive" element5="/src&lt;src.ch02_1_variable" elements="5" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1627263656810" subPackages="false" version="1.0"/>
+</session>

@@ -1,0 +1,84 @@
+package airlineReservationSystem;
+
+import java.util.Scanner;
+
+public class AddExtra {
+
+	public Scanner sc = new Scanner(System.in);
+
+	public int price  = 0;
+//	System.out.println("┍━━━━━━━━━━━━━━━━━━━━━━━━━━━Gwangya AirLine━━━━━━━━━━━━━━━━━━━━━━━━━━━┑"); 
+//	System.out.println("┕━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┙");	
+	public void addFood()	{
+		
+		System.out.println("기내식을 추가합니다.");
+			
+		System.out.println("┍━━━━━━━━━━━━━━━━━━━━━━━━━━━━━廣野    AirLine━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┑"); 
+		System.out.println();
+		System.out.println("   1.> 일반식  |2.> 어린이식 |3.> 저염식 |4.> 할랄식 |5.> 비건식|6.>추가하지않는다.");
+		System.out.println();
+		System.out.println("┕━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┙");
+		System.out.printf("선택 >");
+		
+
+		
+		
+		String num2 =sc.nextLine();
+		
+		if(num2.equals("1""일반식")) {
+			System.out.println("┍━━━━━━━━━━━━━━━━━━━━━━━━━━━━━廣野    AirLine━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┑"); 
+			System.out.println();
+			System.out.println("		           일반식을 추가합니다  price : 10000원");
+			System.out.println();
+			System.out.println("┕━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┙");
+			price =+ 10000;
+			
+			
+		}else if(num2.equals("2")) {
+			System.out.println("어린이식을 추가합니다  price : 8000원");
+			price =+ 8000;
+			
+		}else if(num2.equals("3")) {
+			System.out.println("저염식을 추가합니다  price : 11000원");
+			price =+ 11000;
+			
+		}else if(num2.equals("4")) {
+			System.out.println("할랄식을 추가합니다  price : 9000원");
+			price =+ 9000;
+			
+		}else if(num2.equals("5")) {
+			System.out.println("비건식을 추가합니다  price : 8000원");
+			price =+ 8000;
+		}else {
+			System.out.println("추가하지 않는다.");
+		
+			}
+	}
+			
+	public void addBaggage()	{
+		System.out.println("NEXT");
+		System.out.println("수화물을 추가 합니다.");
+		System.out.println("1. 추가 수화물 10kg |2. 추가 수화물 15kg |3. 선택하지 않는다.");
+//		System.out.println("2. 추가 수화물 15kg");
+//		System.out.println("3. 선택하지 않는다.");
+		
+		String num3 =sc.nextLine();
+		if(num3.equals("1")) {
+			System.out.println("추가수화물 10kg을 추가합니다. price : 50000원");
+			price =+ 50000;
+		}else if(num3.equals("2")) {
+			System.out.println("추가수화물 15kg을 추가합니다. price : 70000원");
+			price =+ 70000;
+		}else{
+			System.out.println("수화물을 추가하지 않습니다.");
+			
+	}
+	}
+	public void total()	{	
+	System.out.println();
+	System.out.println("총 추가요금은 "+price+ "원 입니다.");
+	
+}
+}
+
+

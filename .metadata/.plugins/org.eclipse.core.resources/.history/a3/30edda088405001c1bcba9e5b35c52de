@@ -1,0 +1,70 @@
+package Wilderness;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+public class CustomerSign {
+   private Map<String, MemberMNG> memberMap;
+   private Scanner sc;
+   
+   public CustomerSign() {
+      memberMap = new HashMap<>();
+      sc = new Scanner(System.in);
+      memberMap.put("id", new MemberMNG("admin", "admin", "admin", false, "admin", "admin"));
+   }
+   
+   // 예약자 정보 얻기
+   public void customerInformation() {
+      String gender = null;
+      boolean isMan = false;
+      
+      while (true) {
+         try {
+            System.out.println("예약자 정보를 입력해주세요");
+            System.out.print("성별을 선택해주세요(M or F) > ");
+            switch (gender = sc.nextLine()) {
+            case "M":
+               isMan = true;
+                  gender = "남자";
+               break;
+            case "F":
+               isMan = false;
+                  gender = "여자";
+               break;
+            default:
+               continue;
+            }
+            System.out.print("생년월일을 6자리를 입력해주세요 (931126) > ");
+            String birth = (sc.nextLine());
+            System.out.print("이메일을 입력해주세요 > ");
+            String email = (sc.nextLine());
+            memberMap.put("id", new MemberMNG(isMan, birth, email));
+            System.out.println("==================================");
+            System.out.println("       예약자 정보를 확인하여 주십시오");
+            System.out.println("이름         : " + memberMap.get("id").getName());
+            System.out.println("성별         : " + gender);
+            System.out.println("생년월일   : " + birth);
+            System.out.println("이메일      : " + email);
+            System.out.println("==================================");
+            System.out.println("  1.다음        2.다시 작성");
+            System.out.print("선택 >  ");
+            switch (sc.nextLine()) {
+            case "1":
+               // 메소드호출
+               break;
+            case "2":
+               System.out.println(memberMap.toString());
+               continue;
+            case "3":
+               break;
+            }
+         } catch (Exception e) {
+            System.out.println("입력값이 잘못되었습니다. 다시 입력해주세요");
+            continue;
+         }
+         break;
+      }
+   }
+   
+}

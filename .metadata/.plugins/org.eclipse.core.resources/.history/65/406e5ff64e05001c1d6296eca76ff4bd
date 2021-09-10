@@ -1,0 +1,10 @@
+package airlineReservationSystem;
+
+public class TotalPlaneInfo {
+	String ResInfo = (Reservation.startplace +"->"+ Reservation.arrplace);
+	
+	String allInfo = 
+	
+			
+			
+}

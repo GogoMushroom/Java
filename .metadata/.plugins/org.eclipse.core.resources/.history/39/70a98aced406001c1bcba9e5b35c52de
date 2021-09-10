@@ -1,0 +1,17 @@
+package Wilderness;
+
+
+public class mmmm {
+	
+	public static void main(String[] args) {
+		
+		
+		System.out.println(
+				"가는편 : " + mng.getTicketinfo().GoDate + "\n오는편 : " + mng.getTicketinfo().BackDate + "\n출발지 : "
+						+ mng.getTicketinfo().startplace + "\n도착지: " + mng.getTicketinfo().arrplace+"\n"
+		
+				);
+		
+	}
+	
+}

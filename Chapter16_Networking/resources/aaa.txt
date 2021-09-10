@@ -1,0 +1,4 @@
+abc
+This class implements server sockets. A server socket waits forrequests to come in over the network. It performs some operationbased on that request, and then possibly returns a result to the requester. 
+The actual work of the server socket is performed by an instanceof the SocketImpl class. An application canchange the socket factory that creates the socketimplementation to configure itself to create socketsappropriate to the local firewall.
+Since:JDK1.0See Also:SocketImpl, setSocketFactory(java.net.SocketImplFactory), ServerSocketChannel
